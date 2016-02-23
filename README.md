@@ -3,7 +3,6 @@ Trabalho do Curso de Arquitetura de Software
 
 
 ## Setup
-===
 
 Depois de instalar o [Composer](https://getcomposer.org/), baixe as depêndencias do projeto executando o seguinte comando:
 
@@ -12,7 +11,6 @@ Depois de instalar o [Composer](https://getcomposer.org/), baixe as depêndencia
 ```
 
 ## Testing
-===
 
 Execute o seguinte comando para rodar os testes:
 
