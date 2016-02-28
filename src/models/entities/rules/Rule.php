@@ -1,24 +1,17 @@
 <?php 
+
 namespace ImEx\Models\Entities\Rules;
 
-abstract class Rule implements Contracts\RuleContract {
-	private $_next;
+class Rule extends AbstractRule {
+	private $_id;
+	private $_status;
 
-	public function process() {
-		$this->run();
-
-		if ($this->getNext()) {
-			return $this->getNext()->process();
-		}
-
-		return "done";
+	public function __construct($id, $status) {
+		$this->_id = $id;
+		$this->_status = $status;
 	}
 
-	public function setNext(Rule $next) {
-		$this->_next = $next;
-	}
-
-	public function getNext() {
-		return $this->_next;
+	public function check() {
+		return $this->_status;
 	}
 }

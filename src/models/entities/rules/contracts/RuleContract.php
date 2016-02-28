@@ -4,5 +4,5 @@ namespace ImEx\Models\Entities\Rules\Contracts;
 
 interface RuleContract
 {
-    public function run();
+    public function check();
 }

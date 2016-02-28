@@ -2,14 +2,16 @@
 
 namespace ImEx\Models\Entities\Process;
 
-class Process implements Contracts\ProcessContract {
-	
-	public function import() {
-		return "imported";
+use ImEx\Models\Entities\Steps\Step;
+
+abstract class Process {
+	protected $_steps;
+
+	public function __construct(array $steps) {
+		$this->_steps = $steps;
 	}
 
-	public function export() {
-		return "exported";
+	public function getSteps() {
+		return $this->_steps;
 	}
-
 }
